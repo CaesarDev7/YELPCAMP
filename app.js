@@ -28,7 +28,7 @@ const reviewRoutes = require('./routes/reviews');
 
 const MongoStore = require('connect-mongo');
 
-const dbUrl = 'mongodb://localhost:27017/camp-site';
+const dbUrl = process.env.DB_URL ||  'mongodb://localhost:27017/camp-site';
 //'mongodb://localhost:27017/camp-site'
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
@@ -170,7 +170,7 @@ app.use((err, req, res, next) => {
     res.status(statusCode).render('error', { err })
 })
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log('Serving on port 3000')
 })
 
