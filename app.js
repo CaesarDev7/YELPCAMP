@@ -122,11 +122,11 @@ app.use(
             workerSrc: ["'self'", "blob:"],
             objectSrc: [],
             imgSrc: [
-                //"'self'",
-               // "blob:",
-               // "data:",
-                //"https://res.cloudinary.com/douqbebwk/", //SHOULD MATCH YOUR CLOUDINARY ACCOUNT! 
-                //"https://images.unsplash.com/",
+                "'self'",
+               "blob:",
+               "data:",
+                "https://res.cloudinary.com/dkhgxmvb1/", //SHOULD MATCH YOUR CLOUDINARY ACCOUNT! 
+                "https://images.unsplash.com/",
                 "https://api.maptiler.com/",
             ],
             fontSrc: ["'self'", ...fontSrcUrls],
